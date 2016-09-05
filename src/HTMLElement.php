@@ -73,8 +73,8 @@ class HTMLElement{
     
     public function content($callback){
         $texto = $callback; 
-        if(is_callable($callback)){
-            $texto = HTML::buffer($callback); 
+        if(is_callable($callback) && $callback instanceof \Closure){
+            $texto = HTML::buffer($callback);
         }
         return $this->setText($texto);
     }
@@ -171,7 +171,7 @@ class HTMLElement{
         if(in_array($this->type, ['radio', 'checkbox'])){
             return $this->buildInputGroup($this->type);
         }
-        return $this->build();
+        return $this->build() . "\n";
     }
     
     public function escape() {

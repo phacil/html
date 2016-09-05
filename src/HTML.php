@@ -15,8 +15,15 @@ class HTML {
         if(empty($arguments)){$arguments[0]='';}
         $elementObject = new HTMLElement($name);
         call_user_func_array([$elementObject, 'content'], $arguments);
-        //$elementObject->setText($arguments[0],$arguments[1]);
         return $elementObject;
+    }
+    
+    public static function open($tag){
+        return self::begin($tag);
+    }
+    
+    public static function close($tag){
+        return self::end($tag);
     }
     
     public static function begin($tag){
