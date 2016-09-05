@@ -1,0 +1,23 @@
+{
+    "name": "phacil/html",
+    "description": "Phacil PHP Framework HTML Classes",
+    "license": "MIT",
+    "keywords": ["php", "framework", "phacil", "html"],
+    "authors": [
+        {
+            "name": "Alisson Nascimento",
+            "email": "alisson.sa.nascimento@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phacil\\HTML\\": "src/"
+        }
+    }
+}
