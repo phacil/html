@@ -4,7 +4,7 @@
 * Adapted by: Alisson Nascimento <alisson.sa.nascimento@gmail.com>
 *  
 */
-namespace Phacil\HTML;
+namespace Phacil\Component\HTML;
 
 class HTMLElement{
     /** 
@@ -73,7 +73,7 @@ class HTMLElement{
     
     public function content($callback){
         $texto = $callback; 
-        if(is_callable($callback)){
+        if(is_callable($callback) && $callback instanceof \Closure){
             $texto = HTML::buffer($callback); 
         }
         return $this->setText($texto);
