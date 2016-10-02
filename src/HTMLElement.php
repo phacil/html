@@ -4,7 +4,7 @@
 * Adapted by: Alisson Nascimento <alisson.sa.nascimento@gmail.com>
 *  
 */
-namespace Phacil\HTML;
+namespace Phacil\Component\HTML;
 
 class HTMLElement{
     /** 
@@ -33,7 +33,7 @@ class HTMLElement{
     public $listChecked = null;
 
     /* constructor */
-    public function __construct($type, $self_closer = false, $list = []){
+    public function __construct($type, $self_closer = false){
         $this->type = strtolower($type);
         if($self_closer){
             $this->self_closers[] = $this->type;
@@ -65,7 +65,7 @@ class HTMLElement{
         $o = [];
         
         foreach ($texts as $t){
-            $o[] = (@get_class($t) == __class__)?$t->build():$t;
+            $o[] = (@get_class($t) == __class__)?$t->output():$t;
         }
         $this->attributes['text'] = join($delimiter, $o);
         return $this;
@@ -139,11 +139,13 @@ class HTMLElement{
             
             if(isset($this->attributes['id'])){
                 $id = $this->attributes['id'];
+                $name = $this->attributes['name'];
             }
             
             foreach ($this->list as $k => $v){
                 
                 $this->attributes['id'] = $id . '_' . $k;
+                $this->attributes['name'] = $name . "[$k]";
                 
                 if(in_array($k, $this->listChecked)){
                     $this->attributes['checked'] = 'checked';
@@ -162,6 +164,9 @@ class HTMLElement{
     /* spit it out */
     public function output(){
         if(in_array($this->type, ['radio', 'checkbox'])){
+            $this->attributes['name'] = (isset($this->attributes['name']))
+                    ?$this->attributes['name']
+                    :$this->type;
             return $this->buildInputGroup($this->type);
         }
         return $this->build();

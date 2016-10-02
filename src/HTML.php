@@ -7,7 +7,7 @@
  * 
  */
 
-namespace Phacil\HTML;
+namespace Phacil\Component\HTML;
 
 class HTML {
         
@@ -33,7 +33,7 @@ class HTML {
     }
     
     public static function end($tag){
-        return "</$tag>";
+        return '</'.self::escape($tag).'>';
     }
     
     public static function escape($txt){
@@ -44,7 +44,7 @@ class HTML {
     Especial Tags Function    
      */ 
     
-    public static function select($opcoes = [], $selected = [], $empty = false){
+    public static function select($opcoes = null, $selected = null, $empty = false){
         
         $selected = is_array($selected)?$selected:[$selected];
         
@@ -95,7 +95,7 @@ class HTML {
         return $elementObject;
     }
     
-    public static function radio($list = [], $checked = []){
+    public static function radio($list = null, $checked = null, $aux = null){
         
         $elementObject = new HTMLElement('radio');
         $elementObject->list = $list;
@@ -103,7 +103,7 @@ class HTML {
         return $elementObject;
     }
     
-    public static function checkbox($list = [], $checked = []){
+    public static function checkbox($list = null, $checked = null, $aux = null){
       
         $elementObject = new HTMLElement('checkbox');
         $elementObject->list = $list;
@@ -138,12 +138,12 @@ class HTML {
     
     public static function buffer($callback){        
         if(!extension_loaded('zlib')){
-            if (!ob_start("ob_gzhandler")){
+            if (!ob_start('ob_gzhandler')){
                 ob_start();
             } 
         }else{
             ob_start();
-        }     
+        }
         call_user_func($callback);
         $file_content = ob_get_contents();
         ob_end_clean ();
