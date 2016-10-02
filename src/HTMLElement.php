@@ -65,7 +65,7 @@ class HTMLElement{
         $o = [];
         
         foreach ($texts as $t){
-            $o[] = (@get_class($t) == __class__)?$t->build():$t;
+            $o[] = (@get_class($t) == __class__)?$t->output():$t;
         }
         $this->attributes['text'] = join($delimiter, $o);
         return $this;
@@ -74,7 +74,7 @@ class HTMLElement{
     public function content($callback){
         $texto = $callback; 
         if(is_callable($callback) && $callback instanceof \Closure){
-            $texto = HTML::buffer($callback); 
+            $texto = HTML::buffer($callback);
         }
         return $this->setText($texto);
     }
@@ -139,11 +139,13 @@ class HTMLElement{
             
             if(isset($this->attributes['id'])){
                 $id = $this->attributes['id'];
+                $name = $this->attributes['name'];
             }
             
             foreach ($this->list as $k => $v){
                 
                 $this->attributes['id'] = $id . '_' . $k;
+                $this->attributes['name'] = $name . "[$k]";
                 
                 if(in_array($k, $this->listChecked)){
                     $this->attributes['checked'] = 'checked';
@@ -162,16 +164,16 @@ class HTMLElement{
     /* spit it out */
     public function output(){
         if(in_array($this->type, ['radio', 'checkbox'])){
+            $this->attributes['name'] = (isset($this->attributes['name']))
+                    ?$this->attributes['name']
+                    :$this->type;
             return $this->buildInputGroup($this->type);
         }
         return $this->build();
     }
         
     public function __toString() {
-        if(in_array($this->type, ['radio', 'checkbox'])){
-            return $this->buildInputGroup($this->type);
-        }
-        return $this->build();
+        return $this->output();        
     }
     
     public function escape() {

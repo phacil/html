@@ -95,7 +95,7 @@ class HTML {
         return $elementObject;
     }
     
-    public static function radio($list = [], $checked = []){
+    public static function radio($list = null, $checked = null, $aux = null){
         
         $elementObject = new HTMLElement('radio');
         $elementObject->list = $list;
@@ -103,7 +103,7 @@ class HTML {
         return $elementObject;
     }
     
-    public static function checkbox($list = [], $checked = []){
+    public static function checkbox($list = null, $checked = null, $aux = null){
       
         $elementObject = new HTMLElement('checkbox');
         $elementObject->list = $list;

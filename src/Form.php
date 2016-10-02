@@ -10,9 +10,12 @@ class Form extends HTML{
     private static $params = null;
     
     public static function __callStatic($name, $arguments=[]) {
-        
+        $data = \Phacil\Kernel\Request::getData();
         if(empty($arguments)){$arguments[0]='';}
-        $elementObject = new FormElement($name, false, self::$route, self::$params);
+        if(isset($data[$arguments[0]])){
+            $arguments[0] = $data[$arguments[0]];
+        }
+        $elementObject = new FormElement($name);
         call_user_func_array([$elementObject, 'content'], $arguments);
         return $elementObject;
     }
@@ -79,9 +82,45 @@ class Form extends HTML{
         $elementObject = parent::select($options, $selected, $empty);
         return $elementObject
                 ->name($campo)
-                ->id(self::getInflactor()->camelize($campo));   
+                ->id(self::getInflactor()->camelize($campo));
     }
-
+    
+    public static function textarea($campo){
+        $elementObject = new FormElement('textarea');
+        $data = \Phacil\Kernel\Request::getData();
+        $elementObject->text('');
+        if(isset($data[$campo])){
+            $elementObject->text($data[$campo]);
+        }
+        return $elementObject
+                ->name($campo)
+                ->id(self::getInflactor()->camelize($campo));
+    }
+    
+    public static function radio($campo = null, $list = null, $checked = null) {
+        $data = \Phacil\Kernel\Request::getData();
+        $selected = null;
+        if(isset($data[$campo])){
+            $checked = $data[$campo];
+        }
+        $elementObject = parent::radio($list, $checked);
+        return $elementObject
+                ->name($campo)
+                ->id(self::getInflactor()->camelize($campo));
+    }
+    
+    public static function checkbox($campo = null, $list = null, $checked = null) {
+        $data = \Phacil\Kernel\Request::getData();
+        $selected = null;
+        if(isset($data[$campo])){
+            $checked = array_keys($data[$campo]);
+        }
+        $elementObject = parent::checkbox($list, $checked);
+        return $elementObject
+                ->name($campo)
+                ->id(self::getInflactor()->camelize($campo));
+    }
+    
 }
 
 
