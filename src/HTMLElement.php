@@ -33,7 +33,7 @@ class HTMLElement{
     public $listChecked = null;
 
     /* constructor */
-    public function __construct($type, $self_closer = false, $list = []){
+    public function __construct($type, $self_closer = false){
         $this->type = strtolower($type);
         if($self_closer){
             $this->self_closers[] = $this->type;

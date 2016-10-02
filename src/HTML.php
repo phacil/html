@@ -15,7 +15,6 @@ class HTML {
         if(empty($arguments)){$arguments[0]='';}
         $elementObject = new HTMLElement($name);
         call_user_func_array([$elementObject, 'content'], $arguments);
-        //$elementObject->setText($arguments[0],$arguments[1]);
         return $elementObject;
     }
     
@@ -26,7 +25,15 @@ class HTML {
     }
     
     public static function end($tag){
-        return "</$tag>";
+        return '</'.self::escape($tag).'>';
+    }
+    
+    public static function open($tag) {
+        return self::begin($tag);
+    }
+    
+    public static function close($tag) {
+        return self::end($tag);
     }
     
     public static function escape($txt){
@@ -37,7 +44,7 @@ class HTML {
     Especial Tags Function    
      */ 
     
-    public static function select($opcoes = [], $selected = [], $empty = false){
+    public static function select($opcoes = null, $selected = null, $empty = false){
         
         $selected = is_array($selected)?$selected:[$selected];
         
@@ -131,12 +138,12 @@ class HTML {
     
     public static function buffer($callback){        
         if(!extension_loaded('zlib')){
-            if (!ob_start("ob_gzhandler")){
+            if (!ob_start('ob_gzhandler')){
                 ob_start();
             } 
         }else{
             ob_start();
-        }     
+        }
         call_user_func($callback);
         $file_content = ob_get_contents();
         ob_end_clean ();
