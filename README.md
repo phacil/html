@@ -1,5 +1,5 @@
 # HTML
-HTML is a component of Phacil PHP Framework
+HTML class is a component of Phacil PHP Framework
 
 ## Instalation 
 Download zip from https://github.com/phacil/html, unzip file and use composer update inside folder
@@ -26,6 +26,15 @@ Now you can use the static methods to write HTML tags and its attributes in chai
     echo HTML::begin('div')->class('block')->id('content');
     echo HTML::p(There is some content);
     echo HTML::end('div');
+    /* or */
+    echo HTML::div(function(){
+    	echo HTML::p(There is some content);
+    })->class('block')->id('content');
+    /* or */	
+    echo HTML::div([
+     	HTML::p(There is some content),
+	HTML::p(Another content)
+    ]);
 
 ## Especial Tags Function
 You can write any tag with same structure shown above, except these guys:
