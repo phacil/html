@@ -8,9 +8,10 @@ class Form extends HTML{
     
     private static $route = null;
     private static $params = null;
+    private static $data = [];
     
     public static function __callStatic($name, $arguments=[]) {
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         if(empty($arguments)){$arguments[0]='';}
         if(isset($data[$arguments[0]])){
             $arguments[0] = $data[$arguments[0]];
@@ -52,7 +53,7 @@ class Form extends HTML{
     }
     
     private static function __input($elementObject, $campo){  
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         $elementObject->value('');
         if(isset($data[$campo])){
             $elementObject->value($data[$campo]);
@@ -74,7 +75,7 @@ class Form extends HTML{
     }
     
     public static function select($campo = null, $options = null, $empty=false){        
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         $selected = null;
         if(isset($data[$campo])){
             $selected = $data[$campo];
@@ -87,7 +88,7 @@ class Form extends HTML{
     
     public static function textarea($campo){
         $elementObject = new FormElement('textarea');
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         $elementObject->text('');
         if(isset($data[$campo])){
             $elementObject->text($data[$campo]);
@@ -98,7 +99,7 @@ class Form extends HTML{
     }
     
     public static function radio($campo = null, $list = null, $checked = null) {
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         $selected = null;
         if(isset($data[$campo])){
             $checked = $data[$campo];
@@ -110,7 +111,7 @@ class Form extends HTML{
     }
     
     public static function checkbox($campo = null, $list = null, $checked = null) {
-        $data = \Phacil\Kernel\Request::getData();
+        $data = \Phacil\HTTP\Request::getData();
         $selected = null;
         if(isset($data[$campo])){
             $checked = array_keys($data[$campo]);
