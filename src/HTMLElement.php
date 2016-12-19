@@ -4,7 +4,7 @@
 * Adapted by: Alisson Nascimento <alisson.sa.nascimento@gmail.com>
 *  
 */
-namespace Phacil\Component\HTML;
+namespace Phacil\HTML;
 
 class HTMLElement{
     /** 

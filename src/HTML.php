@@ -7,7 +7,7 @@
  * 
  */
 
-namespace Phacil\Component\HTML;
+namespace Phacil\HTML;
 
 class HTML {
         

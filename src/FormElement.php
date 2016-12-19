@@ -1,6 +1,6 @@
 <?php
 
-namespace Phacil\Component\HTML;
+namespace Phacil\HTML;
 
 class FormElement extends HTMLElement{
     
