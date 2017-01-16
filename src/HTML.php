@@ -10,8 +10,22 @@
 namespace Phacil\HTML;
 
 class HTML {
+    
+    use InstanceTrait;
+    
+    public function __construct() {
+        self::$instance = $this;
+        return $this;
+    }
         
     public static function __callStatic($name, $arguments=[]) {
+        if(empty($arguments)){$arguments[0]='';}
+        $elementObject = new HTMLElement($name);
+        call_user_func_array([$elementObject, 'content'], $arguments);
+        return $elementObject;
+    }
+    
+    public function __call($name, $arguments=[]) {
         if(empty($arguments)){$arguments[0]='';}
         $elementObject = new HTMLElement($name);
         call_user_func_array([$elementObject, 'content'], $arguments);
