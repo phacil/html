@@ -19,6 +19,9 @@
     "autoload": {
         "psr-4": {
             "Phacil\\HTML\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.inc.php"
+        ]
     }
 }
