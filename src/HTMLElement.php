@@ -65,7 +65,7 @@ class HTMLElement{
         $o = [];
         
         foreach ($texts as $t){
-            $o[] = (@get_class($t) == __class__)?$t->output():$t;
+            $o[] = ($t instanceof $this)?$t->output():$t;
         }
         $this->attributes['text'] = join($delimiter, $o);
         return $this;
