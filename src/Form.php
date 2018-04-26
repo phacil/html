@@ -10,7 +10,7 @@ class Form extends HTML{
     private static $params = null;
     private static $data = [];
     
-    use InstanceTrait;
+    use \Phacil\Common\Traits\InstanceTrait;
     
     public function __construct() {
         self::$instance = $this;

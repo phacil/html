@@ -12,7 +12,7 @@ namespace Phacil\HTML;
 
 class HTML {
 
-    use InstanceTrait;
+    use \Phacil\Common\Traits\InstanceTrait;
 
     public function __construct()
     {

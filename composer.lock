@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fb69fcf2cf0df89f88f3f2807bc632a1",
-    "content-hash": "46084f62e3733e0b28ea5152a83cbbcc",
+    "hash": "1015239e195aef154ec8a601ff2ce84c",
+    "content-hash": "d2861540e7549065cea7ea725e5e8286",
     "packages": [
         {
             "name": "icanboogie/inflector",
@@ -58,6 +58,55 @@
                 "underscore"
             ],
             "time": "2017-06-30 13:16:14"
+        },
+        {
+            "name": "phacil/common",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phacil/common.git",
+                "reference": "0fed6a55810586b1618095c7c67cbd34ff161be4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phacil/common/zipball/0fed6a55810586b1618095c7c67cbd34ff161be4",
+                "reference": "0fed6a55810586b1618095c7c67cbd34ff161be4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phacil\\Common\\": "src/"
+                },
+                "files": [
+                    "src/inc/functions.inc.php",
+                    "src/inc/helpers.inc.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alisson Nascimento",
+                    "email": "alisson.sa.nascimento@gmail.com"
+                }
+            ],
+            "description": "Phacil PHP Framework Common Classes",
+            "keywords": [
+                "common",
+                "framework",
+                "phacil",
+                "php"
+            ],
+            "support": {
+                "source": "https://github.com/phacil/common/tree/development",
+                "issues": "https://github.com/phacil/common/issues"
+            },
+            "time": "2017-12-19 01:02:26"
         }
     ],
     "packages-dev": [
@@ -641,16 +690,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.32",
+            "version": "v2.8.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "968ef42161e4bc04200119da473077f9e7015128"
+                "reference": "be720fcfae4614df204190d57795351059946a77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/968ef42161e4bc04200119da473077f9e7015128",
-                "reference": "968ef42161e4bc04200119da473077f9e7015128",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/be720fcfae4614df204190d57795351059946a77",
+                "reference": "be720fcfae4614df204190d57795351059946a77",
                 "shasum": ""
             },
             "require": {
@@ -686,12 +735,14 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-29 09:33:18"
+            "time": "2018-01-03 07:36:31"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phacil/common": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
