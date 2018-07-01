@@ -263,7 +263,7 @@ class HTML {
     {
         return self::_htmlElement('input');
     }
-    public static function input($campo  = null)
+    public static function input($campo)
     {
         return self::_htmlElement('input');
     }
