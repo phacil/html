@@ -11,34 +11,34 @@ namespace Phacil\HTML;
 class HTMLElement {
 
     /**
-      @var $type
+     *  @var $type
      */
     public $type = null;
 
     /**
-      @var $attributes
+     *  @var $attributes
      */
     public $attributes = [];
 
     /**
-      @var $self_closers
+     *  @var $self_closers
      */
     public $self_closers = ['input', 'img', 'hr', 'br', 'meta', 'link', 
         'area', 'base', 'col', 'embed', 'source',
         'track', 'wbr'];
 
     /**
-      @var $style
+     *  @var $style
      */
     public $style = null;
 
     /**
-      @var $list
+     *  @var $list
      */
     public $list = null;
 
     /**
-      @var $listChecked
+     *  @var $listChecked
      */
     public $listChecked = null;
 
@@ -69,7 +69,7 @@ class HTMLElement {
         return $this;
     }
 
-    public function setText($text, $delimiter = " ")
+    public function setText($text, $delimiter = '')
     {
         $texts = array();
         if (!is_array($text)) {
