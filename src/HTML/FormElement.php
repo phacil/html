@@ -18,8 +18,7 @@ class FormElement extends HTMLElement{
     private function _form() {
         
         $_fhead = null;
-        //pr($this->route);exit;
-        
+       
 //        if(!empty($this->attributes['text']) || !is_null($this->attributes['text'])){
 //            $fieldset = new parent('fieldset', true);
 //            $legend = new parent('legend');

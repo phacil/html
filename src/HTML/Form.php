@@ -50,7 +50,6 @@ class Form extends HTML{
             $form = new FormElement('form', true, self::$route, self::$params);
             call_user_func_array([$form, 'content'], ['']);
         }
-        //pr($form); exit;
         
         return $form;
     }
@@ -83,12 +82,12 @@ class Form extends HTML{
     
     public static function input($campo){ 
         $elementObject = new FormElement('input');
-        return self::__input($elementObject, $campo);        
+        return self::__input($elementObject, $campo);
     }
     
     public static function label($campo, $text = null){
         $text = !empty($text)?$text:self::getInflactor()->humanize($campo);
-        $elementObject = HTML::label($text);
+        $elementObject = \phacil\html\label($text);
         return $elementObject->for(self::getInflactor()->camelize($campo));
     }
     
@@ -98,7 +97,7 @@ class Form extends HTML{
         if(isset($data[$campo])){
             $selected = $data[$campo];
         }
-        $elementObject = parent::select($options, $selected, $empty);
+        $elementObject = \phacil\html\select($options, $selected, $empty);
         return $elementObject
                 ->name($campo)
                 ->id(self::getInflactor()->camelize($campo));
@@ -122,7 +121,7 @@ class Form extends HTML{
         if(isset($data[$campo])){
             $checked = $data[$campo];
         }
-        $elementObject = parent::radio($list, $checked);
+        $elementObject = \phacil\html\radio($list, $checked);
         return $elementObject
                 ->name($campo)
                 ->id(self::getInflactor()->camelize($campo));
@@ -134,7 +133,7 @@ class Form extends HTML{
         if(isset($data[$campo])){
             $checked = array_keys($data[$campo]);
         }
-        $elementObject = parent::checkbox($list, $checked);
+        $elementObject = \phacil\html\checkbox($list, $checked);
         return $elementObject
                 ->name($campo)
                 ->id(self::getInflactor()->camelize($campo));

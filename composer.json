@@ -12,17 +12,17 @@
     "require": {
         "php": ">=5.4",
         "icanboogie/inflector": "^1.4",
-        "phacil/common": "^1.2"
+        "phacil/common": "^1.3"
     },
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
         "psr-4": {
-            "Phacil\\HTML\\": "src/"
+            "Phacil\\HTML\\": "src/HTML/"
         },
         "files": [
-            "src/helpers.inc.php"
+            "src/inc/html.helpers.inc.php"
         ]
     }
 }
