@@ -90,7 +90,7 @@ class HTMLElement {
     {
         $texto = $callback;
         if (is_callable($callback) && $callback instanceof \Closure) {
-            $texto = HTML::buffer($callback);
+            $texto = \phacil\html\buffer($callback);
         }
         return $this->setText($texto);
     }

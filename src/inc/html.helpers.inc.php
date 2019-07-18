@@ -32,15 +32,15 @@ namespace phacil\html {
 
     function a($content = null)
     {
-        return tag('a', [$content]);
+        return tag('a', $content);
     }
     function abbr($content = null)
     {
-        return tag('abbr', [$content]);
+        return tag('abbr', $content);
     }
     function address($content = null)
     {
-        return tag('address', [$content]);
+        return tag('address', $content);
     }
     function area()
     {
@@ -48,20 +48,20 @@ namespace phacil\html {
     }
     function article($content = null)
     {
-        return tag('article', [$content]);
+        return tag('article', $content);
     }
     function aside($content = null)
     {
-        return tag('aside', [$content]);
+        return tag('aside', $content);
     }
     function audio($content = null)
     {
-        return tag('audio', [$content]);
+        return tag('audio', $content);
     }
 
     function b($content = null)
     {
-        return tag('b', [$content]);
+        return tag('b', $content);
     }
     function base()
     {
@@ -69,19 +69,19 @@ namespace phacil\html {
     }
     function bdi($content = null)
     {
-        return tag('bdi', [$content]);
+        return tag('bdi', $content);
     }
     function bdo($content = null)
     {
-        return tag('bdo', [$content]);
+        return tag('bdo', $content);
     }
     function blockquote($content = null)
     {
-        return tag('blockquote', [$content]);
+        return tag('blockquote', $content);
     }
     function body($content = null)
     {
-        return tag('body', [$content]);
+        return tag('body', $content);
     }
     function br()
     {
@@ -89,24 +89,24 @@ namespace phacil\html {
     }
     function button($content = null)
     {
-        return tag('button', [$content]);
+        return tag('button', $content);
     }
     
     function canvas($content = null)
     {
-        return tag('canvas', [$content]);
+        return tag('canvas', $content);
     }
     function caption($content = null)
     {
-        return tag('caption', [$content]);
+        return tag('caption', $content);
     }
     function cite($content = null)
     {
-        return tag('cite', [$content]);
+        return tag('cite', $content);
     }
     function code($content = null)
     {
-        return tag('code', [$content]);
+        return tag('code', $content);
     }
     function col()
     {
@@ -114,57 +114,57 @@ namespace phacil\html {
     }
     function colgroup($content = null)
     {
-        return tag('colgroup', [$content]);
+        return tag('colgroup', $content);
     }
     function command($content = null)
     {
-        return tag('command', [$content]);
+        return tag('command', $content);
     }
 
     function data($content = null)
     {
-        return tag('data', [$content]);
+        return tag('data', $content);
     }
     function datalist($content = null)
     {
-        return tag('datalist', [$content]);
+        return tag('datalist', $content);
     }
     function dd($content = null)
     {
-        return tag('dd', [$content]);
+        return tag('dd', $content);
     }
     function del($content = null)
     {
-        return tag('del', [$content]);
+        return tag('del', $content);
     }
     function details($content = null)
     {
-        return tag('details', [$content]);
+        return tag('details', $content);
     }
     function dialog($content = null)
     {
-        return tag('dialog', [$content]);
+        return tag('dialog', $content);
     }
     function dfn($content = null)
     {
-        return tag('dfn', [$content]);
+        return tag('dfn', $content);
     }
     function div($content = null)
     {
-        return tag('div', [$content]);
+        return tag('div', $content);
     }
     function dl($content = null)
     {
-        return tag('dl', [$content]);
+        return tag('dl', $content);
     }
     function dt($content = null)
     {
-        return tag('dt', [$content]);
+        return tag('dt', $content);
     }
 
     function em($content = null)
     {
-        return tag('em', [$content]);
+        return tag('em', $content);
     }
     function embed()
     {
@@ -173,56 +173,56 @@ namespace phacil\html {
 
     function fieldset($content = null)
     {
-        return tag('fieldset', [$content]);
+        return tag('fieldset', $content);
     }
      function figcaption($content = null)
     {
-        return tag('figcaption', [$content]);
+        return tag('figcaption', $content);
     }
     function figure($content = null)
     {
-        return tag('figure', [$content]);
+        return tag('figure', $content);
     }
     function footer($content = null)
     {
-        return tag('footer', [$content]);
+        return tag('footer', $content);
     }
     function form($content = null)
     {
-        return tag('form', [$content]);
+        return tag('form', $content);
     }
 
     function h1($content = null)
     {
-        return tag('h1', [$content]);
+        return tag('h1', $content);
     }
     function h2($content = null)
     {
-        return tag('h2', [$content]);
+        return tag('h2', $content);
     }
     function h3($content = null)
     {
-        return tag('h3', [$content]);
+        return tag('h3', $content);
     }
     function h4($content = null)
     {
-        return tag('h4', [$content]);
+        return tag('h4', $content);
     }
     function h5($content = null)
     {
-        return tag('h5', [$content]);
+        return tag('h5', $content);
     }
     function h6($content = null)
     {
-        return tag('h6', [$content]);
+        return tag('h6', $content);
     }
     function head($content = null)
     {
-        return tag('head', [$content]);
+        return tag('head', $content);
     }
     function header($content = null)
     {
-        return tag('header', [$content]);
+        return tag('header', $content);
     }
     function hr()
     {
@@ -230,12 +230,12 @@ namespace phacil\html {
     }
     function html($content = null)
     {
-        return tag('html', [$content]);
+        return tag('html', $content);
     }
     
     function i($content = '')
     {
-        return tag('i', [$content]);
+        return tag('i', $content);
     }
     function iframe()
     {
@@ -251,25 +251,25 @@ namespace phacil\html {
     }
     function ins($content = null)
     {
-        return tag('ins', [$content]);
+        return tag('ins', $content);
     }
 
     function kbd($content = null)
     {
-        return tag('kbd', [$content]);
+        return tag('kbd', $content);
     }
 
     function label($content = null)
     {
-        return tag('label', [$content]);
+        return tag('label', $content);
     }
     function legend($content = null)
     {
-        return tag('legend', [$content]);
+        return tag('legend', $content);
     }
     function li($content = null)
     {
-        return tag('li', [$content]);
+        return tag('li', $content);
     }
     function link()
     {
@@ -278,15 +278,15 @@ namespace phacil\html {
 
     function map($content = '')
     {
-        return tag('map', [$content]);
+        return tag('map', $content);
     }
     function mark($content = null)
     {
-        return tag('mark', [$content]);
+        return tag('mark', $content);
     }
     function menu($content = null)
     {
-        return tag('menu', [$content]);
+        return tag('menu', $content);
     }
     function meta()
     {
@@ -295,11 +295,11 @@ namespace phacil\html {
     
     function nav($content = null)
     {
-        return tag('nav', [$content]);
+        return tag('nav', $content);
     }
     function noscript($content = null)
     {
-        return tag('noscript', [$content]);
+        return tag('noscript', $content);
     }
 
     function object()
@@ -308,15 +308,15 @@ namespace phacil\html {
     }
     function ol($content = null)
     {
-        return tag('ol', [$content]);
+        return tag('ol', $content);
     }
     function optgroup($content = null)
     {
-        return tag('optgroup', [$content]);
+        return tag('optgroup', $content);
     }
     function option($content = null)
     {
-        return tag('option', [$content]);
+        return tag('option', $content);
     }
     function output()
     {
@@ -325,15 +325,15 @@ namespace phacil\html {
 
     function p($content = null)
     {
-        return tag('p', [$content]);
+        return tag('p', $content);
     }
     function param($content = null)
     {
-        return tag('param', [$content]);
+        return tag('param', $content);
     }
     function pre($content = null)
     {
-        return tag('pre', [$content]);
+        return tag('pre', $content);
     }
     function progress()
     {
@@ -342,32 +342,32 @@ namespace phacil\html {
     
     function q($content = null)
     {
-        return tag('q', [$content]);
+        return tag('q', $content);
     }
 
     function s($content = null)
     {
-        return tag('s', [$content]);
+        return tag('s', $content);
     }
     function samp($content = null)
     {
-        return tag('samp', [$content]);
+        return tag('samp', $content);
     }
     function script($content = null)
     {
-        return tag('script', [$content]);
+        return tag('script', $content);
     }
     function section($content = null)
     {
-        return tag('section', [$content]);
+        return tag('section', $content);
     }
     function select($content = null)
     {
-        return tag('select', [$content]);
+        return tag('select', $content);
     }
     function small($content = null)
     {
-        return tag('small', [$content]);
+        return tag('small', $content);
     }
     function source()
     {
@@ -375,11 +375,11 @@ namespace phacil\html {
     }
     function span($content = null)
     {
-        return tag('span', [$content]);
+        return tag('span', $content);
     }
     function strong($content = null)
     {
-        return tag('strong', [$content]);
+        return tag('strong', $content);
     }
     function style($styles = [], $style = "<style>\n", $close = true)
     {
@@ -406,56 +406,56 @@ namespace phacil\html {
     }
     function sub($content = null)
     {
-        return tag('sub', [$content]);
+        return tag('sub', $content);
     }
     function summary($content = null)
     {
-        return tag('summary', [$content]);
+        return tag('summary', $content);
     }
     function sup($content = null)
     {
-        return tag('sup', [$content]);
+        return tag('sup', $content);
     }
 
     function table($content = null)
     {
-        return tag('table', [$content]);
+        return tag('table', $content);
     }
     function tbody($content = null)
     {
-        return tag('tbody', [$content]);
+        return tag('tbody', $content);
     }
     function td($content = null)
     {
-        return tag('td', [$content]);
+        return tag('td', $content);
     }
     function textarea($content = null)
     {
-        return tag('textarea', [$content]);
+        return tag('textarea', $content);
     }
     function tfoot($content = null)
     {
-        return tag('tfoot', [$content]);
+        return tag('tfoot', $content);
     }
     function thead($content = null)
     {
-        return tag('thead', [$content]);
+        return tag('thead', $content);
     }
     function th($content = null)
     {
-        return tag('th', [$content]);
+        return tag('th', $content);
     }
     function time($content = null)
     {
-        return tag('time', [$content]);
+        return tag('time', $content);
     }
     function title($content = null)
     {
-        return tag('title', [$content]);
+        return tag('title', $content);
     }
     function tr($content = null)
     {
-        return tag('tr', [$content]);
+        return tag('tr', $content);
     }
     function track()
     {
@@ -464,12 +464,12 @@ namespace phacil\html {
     
     function ul($content = null)
     {
-        return tag('ul', [$content]);
+        return tag('ul', $content);
     }
     
     function video($content = null)
     {
-        return tag('video', [$content]);
+        return tag('video', $content);
     }
     
     function wbr()
