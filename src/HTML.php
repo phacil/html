@@ -48,15 +48,15 @@ class HTML {
       Tags Function
      */
 
-    public static function a($content)
+    public static function a($content = null)
     {
         return self::_htmlElement('a', [$content]);
     }
-    public static function abbr($content)
+    public static function abbr($content = null)
     {
         return self::_htmlElement('abbr', [$content]);
     }
-    public static function address($content)
+    public static function address($content = null)
     {
         return self::_htmlElement('address', [$content]);
     }
@@ -64,20 +64,20 @@ class HTML {
     {
         return self::_htmlElement('area');
     }
-    public static function article($content)
+    public static function article($content = null)
     {
         return self::_htmlElement('article', [$content]);
     }
-    public static function aside($content)
+    public static function aside($content = null)
     {
         return self::_htmlElement('aside', [$content]);
     }
-    public static function audio($content)
+    public static function audio($content = null)
     {
         return self::_htmlElement('audio', [$content]);
     }
 
-    public static function b($content)
+    public static function b($content = null)
     {
         return self::_htmlElement('b', [$content]);
     }
@@ -85,19 +85,19 @@ class HTML {
     {
         return self::_htmlElement('base');
     }
-    public static function bdi($content)
+    public static function bdi($content = null)
     {
         return self::_htmlElement('bdi', [$content]);
     }
-    public static function bdo($content)
+    public static function bdo($content = null)
     {
         return self::_htmlElement('bdo', [$content]);
     }
-    public static function blockquote($content)
+    public static function blockquote($content = null)
     {
         return self::_htmlElement('blockquote', [$content]);
     }
-    public static function body($content)
+    public static function body($content = null)
     {
         return self::_htmlElement('body', [$content]);
     }
@@ -105,24 +105,24 @@ class HTML {
     {
         return self::_htmlElement('br');
     }
-    public static function button($content)
+    public static function button($content = null)
     {
         return self::_htmlElement('button', [$content]);
     }
     
-    public static function canvas($content)
+    public static function canvas($content = null)
     {
         return self::_htmlElement('canvas', [$content]);
     }
-    public static function caption($content)
+    public static function caption($content = null)
     {
         return self::_htmlElement('caption', [$content]);
     }
-    public static function cite($content)
+    public static function cite($content = null)
     {
         return self::_htmlElement('cite', [$content]);
     }
-    public static function code($content)
+    public static function code($content = null)
     {
         return self::_htmlElement('code', [$content]);
     }
@@ -130,57 +130,57 @@ class HTML {
     {
         return self::_htmlElement('col');
     }
-    public static function colgroup($content)
+    public static function colgroup($content = null)
     {
         return self::_htmlElement('colgroup', [$content]);
     }
-    public static function command($content)
+    public static function command($content = null)
     {
         return self::_htmlElement('command', [$content]);
     }
 
-    public static function data($content)
+    public static function data($content = null)
     {
         return self::_htmlElement('data', [$content]);
     }
-    public static function datalist($content)
+    public static function datalist($content = null)
     {
         return self::_htmlElement('datalist', [$content]);
     }
-    public static function dd($content)
+    public static function dd($content = null)
     {
         return self::_htmlElement('dd', [$content]);
     }
-    public static function del($content)
+    public static function del($content = null)
     {
         return self::_htmlElement('del', [$content]);
     }
-    public static function details($content)
+    public static function details($content = null)
     {
         return self::_htmlElement('details', [$content]);
     }
-    public static function dialog($content)
+    public static function dialog($content = null)
     {
         return self::_htmlElement('dialog', [$content]);
     }
-    public static function dfn($content)
+    public static function dfn($content = null)
     {
         return self::_htmlElement('dfn', [$content]);
     }
-    public static function div($content)
+    public static function div($content = null)
     {
         return self::_htmlElement('div', [$content]);
     }
-    public static function dl($content)
+    public static function dl($content = null)
     {
         return self::_htmlElement('dl', [$content]);
     }
-    public static function dt($content)
+    public static function dt($content = null)
     {
         return self::_htmlElement('dt', [$content]);
     }
 
-    public static function em($content)
+    public static function em($content = null)
     {
         return self::_htmlElement('em', [$content]);
     }
@@ -189,56 +189,56 @@ class HTML {
         return self::_htmlElement('embed');
     }
 
-    public static function fieldset($content)
+    public static function fieldset($content = null)
     {
         return self::_htmlElement('fieldset', [$content]);
     }
-     public static function figcaption($content)
+     public static function figcaption($content = null)
     {
         return self::_htmlElement('figcaption', [$content]);
     }
-    public static function figure($content)
+    public static function figure($content = null)
     {
         return self::_htmlElement('figure', [$content]);
     }
-    public static function footer($content)
+    public static function footer($content = null)
     {
         return self::_htmlElement('footer', [$content]);
     }
-    public static function form($content)
+    public static function form($content = null)
     {
         return self::_htmlElement('form', [$content]);
     }
 
-    public static function h1($content)
+    public static function h1($content = null)
     {
         return self::_htmlElement('h1', [$content]);
     }
-    public static function h2($content)
+    public static function h2($content = null)
     {
         return self::_htmlElement('h2', [$content]);
     }
-    public static function h3($content)
+    public static function h3($content = null)
     {
         return self::_htmlElement('h3', [$content]);
     }
-    public static function h4($content)
+    public static function h4($content = null)
     {
         return self::_htmlElement('h4', [$content]);
     }
-    public static function h5($content)
+    public static function h5($content = null)
     {
         return self::_htmlElement('h5', [$content]);
     }
-    public static function h6($content)
+    public static function h6($content = null)
     {
         return self::_htmlElement('h6', [$content]);
     }
-    public static function head($content)
+    public static function head($content = null)
     {
         return self::_htmlElement('head', [$content]);
     }
-    public static function header($content)
+    public static function header($content = null)
     {
         return self::_htmlElement('header', [$content]);
     }
@@ -246,7 +246,7 @@ class HTML {
     {
         return self::_htmlElement('hr');
     }
-    public static function html($content)
+    public static function html($content = null)
     {
         return self::_htmlElement('html', [$content]);
     }
@@ -261,31 +261,31 @@ class HTML {
     }
     public static function img()
     {
-        return self::_htmlElement('input');
+        return self::_htmlElement('img');
     }
     public static function input($campo)
     {
         return self::_htmlElement('input');
     }
-    public static function ins($content)
+    public static function ins($content = null)
     {
         return self::_htmlElement('ins', [$content]);
     }
 
-    public static function kbd($content)
+    public static function kbd($content = null)
     {
         return self::_htmlElement('kbd', [$content]);
     }
 
-    public static function label($content)
+    public static function label($content = null)
     {
         return self::_htmlElement('label', [$content]);
     }
-    public static function legend($content)
+    public static function legend($content = null)
     {
         return self::_htmlElement('legend', [$content]);
     }
-    public static function li($content)
+    public static function li($content = null)
     {
         return self::_htmlElement('li', [$content]);
     }
@@ -298,11 +298,11 @@ class HTML {
     {
         return self::_htmlElement('map', [$content]);
     }
-    public static function mark($content)
+    public static function mark($content = null)
     {
         return self::_htmlElement('mark', [$content]);
     }
-    public static function menu($content)
+    public static function menu($content = null)
     {
         return self::_htmlElement('menu', [$content]);
     }
@@ -311,11 +311,11 @@ class HTML {
         return self::_htmlElement('meta');
     }
     
-    public static function nav($content)
+    public static function nav($content = null)
     {
         return self::_htmlElement('nav', [$content]);
     }
-    public static function noscript($content)
+    public static function noscript($content = null)
     {
         return self::_htmlElement('noscript', [$content]);
     }
@@ -324,15 +324,15 @@ class HTML {
     {
         return self::_htmlElement('object');
     }
-    public static function ol($content)
+    public static function ol($content = null)
     {
         return self::_htmlElement('ol', [$content]);
     }
-    public static function optgroup($content)
+    public static function optgroup($content = null)
     {
         return self::_htmlElement('optgroup', [$content]);
     }
-    public static function option($content)
+    public static function option($content = null)
     {
         return self::_htmlElement('option', [$content]);
     }
@@ -341,15 +341,15 @@ class HTML {
         return self::_htmlElement('output');
     }
 
-    public static function p($content)
+    public static function p($content = null)
     {
         return self::_htmlElement('p', [$content]);
     }
-    public static function param($content)
+    public static function param($content = null)
     {
         return self::_htmlElement('param', [$content]);
     }
-    public static function pre($content)
+    public static function pre($content = null)
     {
         return self::_htmlElement('pre', [$content]);
     }
@@ -358,32 +358,32 @@ class HTML {
         return self::_htmlElement('progress');
     }
     
-    public static function q($content)
+    public static function q($content = null)
     {
         return self::_htmlElement('q', [$content]);
     }
 
-    public static function s($content)
+    public static function s($content = null)
     {
         return self::_htmlElement('s', [$content]);
     }
-    public static function samp($content)
+    public static function samp($content = null)
     {
         return self::_htmlElement('samp', [$content]);
     }
-    public static function script($content)
+    public static function script($content = null)
     {
         return self::_htmlElement('script', [$content]);
     }
-    public static function section($content)
+    public static function section($content = null)
     {
         return self::_htmlElement('section', [$content]);
     }
-    public static function select($content)
+    public static function select($content = null)
     {
         return self::_htmlElement('select', [$content]);
     }
-    public static function small($content)
+    public static function small($content = null)
     {
         return self::_htmlElement('small', [$content]);
     }
@@ -391,11 +391,11 @@ class HTML {
     {
         return self::_htmlElement('source');
     }
-    public static function span($content)
+    public static function span($content = null)
     {
         return self::_htmlElement('span', [$content]);
     }
-    public static function strong($content)
+    public static function strong($content = null)
     {
         return self::_htmlElement('strong', [$content]);
     }
@@ -422,56 +422,56 @@ class HTML {
         }
         return $style;
     }
-    public static function sub($content)
+    public static function sub($content = null)
     {
         return self::_htmlElement('sub', [$content]);
     }
-    public static function summary($content)
+    public static function summary($content = null)
     {
         return self::_htmlElement('summary', [$content]);
     }
-    public static function sup($content)
+    public static function sup($content = null)
     {
         return self::_htmlElement('sup', [$content]);
     }
 
-    public static function table($content)
+    public static function table($content = null)
     {
         return self::_htmlElement('table', [$content]);
     }
-    public static function tbody($content)
+    public static function tbody($content = null)
     {
         return self::_htmlElement('tbody', [$content]);
     }
-    public static function td($content)
+    public static function td($content = null)
     {
         return self::_htmlElement('td', [$content]);
     }
-    public static function textarea($content)
+    public static function textarea($content = null)
     {
         return self::_htmlElement('textarea', [$content]);
     }
-    public static function tfoot($content)
+    public static function tfoot($content = null)
     {
         return self::_htmlElement('tfoot', [$content]);
     }
-    public static function thead($content)
+    public static function thead($content = null)
     {
         return self::_htmlElement('thead', [$content]);
     }
-    public static function th($content)
+    public static function th($content = null)
     {
         return self::_htmlElement('th', [$content]);
     }
-    public static function time($content)
+    public static function time($content = null)
     {
         return self::_htmlElement('time', [$content]);
     }
-    public static function title($content)
+    public static function title($content = null)
     {
         return self::_htmlElement('title', [$content]);
     }
-    public static function tr($content)
+    public static function tr($content = null)
     {
         return self::_htmlElement('tr', [$content]);
     }
@@ -480,12 +480,12 @@ class HTML {
         return self::_htmlElement('track');
     }
     
-    public static function ul($content)
+    public static function ul($content = null)
     {
         return self::_htmlElement('ul', [$content]);
     }
     
-    public static function video($content)
+    public static function video($content = null)
     {
         return self::_htmlElement('video', [$content]);
     }

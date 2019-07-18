@@ -132,7 +132,7 @@ class HTMLElement {
         if (count($this->attributes)) {
             foreach ($this->attributes as $key => $value) {
                 if (!in_array($key, ['text'])) {
-                    $build .= ' ' . $key . '="' . $value . '"';
+                    $build .= ' ' . $key . "='" . $value . "'";
                 }
             }
         }
@@ -211,7 +211,7 @@ class HTMLElement {
     }
 
     /**
-      Especial Attributes Functions
+     * Especial Attributes Functions
      */
     public function data($attr, $value)
     {
